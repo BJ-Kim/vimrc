@@ -11,6 +11,7 @@ set nu
 set hlsearch
 set nocompatible
 
+au VimEnter *  NERDTree
 nmap <F7> :NERDTree<CR>
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
@@ -47,6 +48,20 @@ Plugin 'indentpython.vim'
 
 Plugin 'snipMate'
 
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+Plugin 'indentpython'
+
+Plugin 'leafgarland/typescript-vim'
+
+Plugin 'junegunn/vim-easy-align'
+
+Plugin 'pangloss/vim-javascript'
+
+Plugin 'mxw/vim-jsx'
+
 call vundle#end()
 
 filetype plugin indent on " Put your non-Plugin stuff after this line
+
+let g:jsx_ext_required = 0
