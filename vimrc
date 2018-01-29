@@ -10,15 +10,20 @@ set cindent
 set nu
 set hlsearch
 set nocompatible
+set encoding=utf-8
 
-au VimEnter *  NERDTree
+" au VimEnter *  NERDTree
 nmap <F7> :NERDTree<CR>
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 nnoremap <Leader>rc :rightbelow vnew $MYVIMRC<CR>
+vnoremap <C-c> :w !pbcopy<CR><CR> 
 filetype off
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes':   [],'passive_filetypes': [] }
+noremap <C-w>e :SyntasticCheck<CR>
+noremap <C-w>f :SyntasticToggleMode<CR>
 
 set rtp+=~/.vim/bundle/Vundle.vim
 
@@ -60,8 +65,13 @@ Plugin 'pangloss/vim-javascript'
 
 Plugin 'mxw/vim-jsx'
 
+Plugin 'rudes/vim-java'
+
+Plugin 'mikelue/vim-maven-plugin'
+
 call vundle#end()
 
 filetype plugin indent on " Put your non-Plugin stuff after this line
 
 let g:jsx_ext_required = 0
+let NERDTreeIgnore = ['\.pyc$']
