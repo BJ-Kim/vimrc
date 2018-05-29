@@ -69,6 +69,11 @@ Plugin 'rudes/vim-java'
 
 Plugin 'mikelue/vim-maven-plugin'
 
+Plugin 'posva/vim-vue'
+
+Bundle 'Valloric/YouCompleteMe'
+" python ./install.py --clang-completer 
+
 call vundle#end()
 
 filetype plugin indent on " Put your non-Plugin stuff after this line
