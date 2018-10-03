@@ -11,6 +11,7 @@ set nu
 set hlsearch
 set nocompatible
 set encoding=utf-8
+set mouse=a
 
 " au VimEnter *  NERDTree
 nmap <F7> :NERDTree<CR>
@@ -73,6 +74,7 @@ Plugin 'posva/vim-vue'
 
 Bundle 'Valloric/YouCompleteMe'
 " python ./install.py --clang-completer 
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 
