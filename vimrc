@@ -15,6 +15,7 @@ set mouse=a
 
 " au VimEnter *  NERDTree
 nmap <F7> :NERDTree<CR>
+nmap <F8> :TagbarToggle<CR>
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
@@ -76,9 +77,12 @@ Bundle 'Valloric/YouCompleteMe'
 " python ./install.py --clang-completer 
 Plugin 'fatih/vim-go'
 
+Plugin 'majutsushi/tagbar'
+
 call vundle#end()
 
 filetype plugin indent on " Put your non-Plugin stuff after this line
 
 let g:jsx_ext_required = 0
 let NERDTreeIgnore = ['\.pyc$']
+let g:python_highlight_all = 1
